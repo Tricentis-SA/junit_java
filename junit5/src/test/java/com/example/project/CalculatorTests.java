@@ -26,6 +26,13 @@ class CalculatorTests {
 		assertEquals(2, calculator.add(1, 1), "1 + 1 should equal 2");
 	}
 
+	@Test
+	@DisplayName("10 - 8 = 2")
+	void subtractsTwoNumbers() {
+		Calculator calculator = new Calculator();
+		assertEquals(2, calculator.subtract(10, 8), "10 - 8 should equal 2");
+	}
+	
 	@ParameterizedTest(name = "{0} + {1} = {2}")
 	@CsvSource({
 			"0,    1,   1",
