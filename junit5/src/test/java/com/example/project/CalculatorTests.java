@@ -33,6 +33,20 @@ class CalculatorTests {
 		assertEquals(2, calculator.subtract(10, 8), "10 - 8 should equal 2");
 	}
 	
+	@Test
+	@DisplayName("4 * 3 = 12")
+	void multipliesTwoNumbers() {
+		Calculator calculator = new Calculator();
+		assertEquals(12, calculator.multiply(4, 3), "4 * 3 should equal 12");
+	}
+
+	@Test
+	@DisplayName("10 / 2 = 5")
+	void divideesTwoNumbers() {
+		Calculator calculator = new Calculator();
+		assertEquals(2, calculator.divide(10, 2), "10 / 2 should equal 5");
+	}
+	
 	@ParameterizedTest(name = "{0} + {1} = {2}")
 	@CsvSource({
 			"0,    1,   1",
@@ -40,7 +54,7 @@ class CalculatorTests {
 			"49,  51, 100",
 			"1,  100, 101"
 	})
-	void add(int first, int second, int expectedResult) {
+	void addParameterized(int first, int second, int expectedResult) {
 		Calculator calculator = new Calculator();
 		assertEquals(expectedResult, calculator.add(first, second),
 				() -> first + " + " + second + " should equal " + expectedResult);
