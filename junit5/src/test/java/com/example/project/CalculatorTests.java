@@ -44,7 +44,7 @@ class CalculatorTests {
 	@DisplayName("10 / 2 = 5")
 	void divideesTwoNumbers() {
 		Calculator calculator = new Calculator();
-		assertEquals(2, calculator.divide(10, 2), "10 / 2 should equal 5");
+		assertEquals(5, calculator.divide(10, 2), "10 / 2 should equal 5");
 	}
 	
 	@ParameterizedTest(name = "{0} + {1} = {2}")
